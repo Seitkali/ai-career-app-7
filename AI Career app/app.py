@@ -3,6 +3,7 @@ from openai import OpenAI
 import os, json
 
 # Инициализация OpenAI-клиента (ключ из окружения или файла secrets)
+import openai
 import os
 client = OpenAI(api_key=os.getenv("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"))
 
