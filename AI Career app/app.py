@@ -1,12 +1,5 @@
 import streamlit as st
-response = client.chat.completions.create(
-    model="gpt-4o-mini",
-    messages=[
-        {"role": "user", "content": prompt}
-    ]
-)
-
-result = response.choices[0].message.content
+from openai import OpenAI
 import os, json
 
 # Инициализация OpenAI-клиента (ключ из окружения или файла secrets)
