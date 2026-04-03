@@ -3,8 +3,14 @@ from openai import OpenAI
 import os, json
 
 # Инициализация OpenAI-клиента (ключ из окружения или файла secrets)
-import os
-from openai import OpenAI
+response = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[
+        {"role": "user", "content": prompt}
+    ]
+)
+
+result = response.choices[0].message.content
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
