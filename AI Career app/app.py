@@ -1,11 +1,19 @@
 import streamlit as st
-from openai import OpenAI
+response = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[
+        {"role": "user", "content": prompt}
+    ]
+)
+
+result = response.choices[0].message.content
 import os, json
 
 # Инициализация OpenAI-клиента (ключ из окружения или файла secrets)
-import openai
 import os
-client = OpenAI(api_key=os.getenv("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"))
+from openai import OpenAI
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 st.set_page_config(page_title="AI Профориентация", layout="centered")
 st.title("🧠 AI-Профориентация нового поколения")
