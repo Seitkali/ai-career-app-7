@@ -3,12 +3,7 @@ from openai import OpenAI
 import os, json
 
 # Инициализация OpenAI-клиента (ключ из окружения или файла secrets)
-response = client.chat.completions.create(
-    model="gpt-4o-mini",
-    messages=[
-        {"role": "user", "content": prompt}
-    ]
-)
+
 
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
