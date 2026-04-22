@@ -6,8 +6,7 @@ import os, json
 
 
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 st.set_page_config(page_title="AI Профориентация", layout="centered")
 st.title("🧠 AI-Профориентация нового поколения")
 
