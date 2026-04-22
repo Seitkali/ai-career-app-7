@@ -10,7 +10,6 @@ response = client.chat.completions.create(
     ]
 )
 
-result = response.choices[0].message.content
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
